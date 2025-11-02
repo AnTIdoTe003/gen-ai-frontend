@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%; /* Pure white */
+  --foreground: 224 71.4% 4.1%; /* Dark slate blue for text */
+  --card: 0 0% 100%;
+  --card-foreground: 224 71.4% 4.1%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71.4% 4.1%;
+  --primary: 217 91% 60%; /* #2F80ED Blue for primary actions */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 190 78% 65%; /* #56CCF2 Cyan for accents */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 220 14.3% 95.9%;
+  --muted-foreground: 220 8.9% 46.1%;
+  --accent: 190 78% 65%; /* Cyan accent */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 217 91% 60%;
+  --chart-1: 217 91% 60%;
+  --chart-2: 190 78% 65%;
+  --chart-3: 45 93% 47%;
+  --chart-4: 220 70% 50%;
+  --chart-5: 224 71.4% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 224 71.4% 4.1%;
+  --foreground: 0 0% 100%;
+  --card: 224 71.4% 4.1%;
+  --card-foreground: 0 0% 100%;
+  --popover: 224 71.4% 4.1%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 217 91% 65%; /* Brighter blue for dark mode */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 190 78% 70%; /* Brighter cyan for dark mode */
+  --secondary-foreground: 224 71.4% 4.1%;
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 217.9 10.6% 64.9%;
+  --accent: 190 78% 70%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --ring: 217 91% 65%;
+  --chart-1: 217 91% 65%;
+  --chart-2: 190 78% 70%;
+  --chart-3: 45 93% 70%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 20 90% 65%;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
