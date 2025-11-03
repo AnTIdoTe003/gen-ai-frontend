@@ -1,4 +1,4 @@
-# 🌟 TripCraft AI - Your Personalized Journey Awaits
+# 🌟 Roxy AI - Your Personalized Journey Awaits
 
 > **Discover India like never before with AI-crafted itineraries tailored to your budget, interests, and time.**
 
@@ -8,20 +8,16 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker)](https://www.docker.com/)
 
-## 🚀 What is TripCraft AI?
+## 🚀 What is Roxy AI?
 
-TripCraft AI is a revolutionary travel planning platform that uses artificial intelligence to create personalized itineraries for exploring India. From heritage wonders to adventure thrills, our AI analyzes your preferences, budget, and time constraints to craft the perfect journey.
+Roxy AI is a revolutionary travel planning platform that uses artificial intelligence to create personalized itineraries for exploring India. From heritage wonders to adventure thrills, our AI analyzes your preferences, budget, and time constraints to craft the perfect journey.
 
 ### ✨ Key Features
 
-- 🧠 **AI-Powered Chat Interface** - ChatGPT-like conversational interface for trip planning
-- 🎤 **Voice Input Support** - Speak your travel requests using Web Speech API
-- 💬 **Chat History & Sessions** - Persistent chat history with session management
-- 🧠 **Intelligent AI Agent** - Agentic AI that learns from interactions and remembers preferences
-- 🗺️ **Dynamic Itinerary Creation** - Real-time personalized itinerary building
+- 🧠 **AI-Powered Itineraries** - Advanced AI creates perfectly tailored travel plans
 - 🗺️ **Local Insights** - Authentic recommendations from local experts and hidden gems
-- ⏰ **Real-Time Adaptation** - Automatic adjustments for weather changes or delays
-- 💳 **Flight & Hotel Cards** - Interactive cards for booking flights and hotels
+- ⏰ **Real-Time Adjustments** - Instant itinerary updates for weather changes or delays
+- 💳 **One-Click Booking** - Integrated booking system for flights, hotels, and experiences
 - 🌍 **Multilingual Support** - Available in Hindi, English, and 10+ regional languages
 - ⚡ **Instant Planning** - Complete itinerary in under 2 minutes
 
@@ -43,20 +39,16 @@ TripCraft AI is a revolutionary travel planning platform that uses artificial in
 - **Fonts**: Space Grotesk & DM Sans (Google Fonts)
 - **Analytics**: Vercel Analytics
 
-### Backend & Authentication
+### Authentication & APIs
 
-- **Firebase**: Firebase Authentication and App Hosting integration
-- **Google OAuth**: Firebase Auth with Google Sign-In integration
-- **API Backend**: Custom API integration for chat and trip planning
-- **Chat History API**: RESTful API for managing chat sessions and history
+- **Google OAuth**: Google Sign-In integration
+- **API Backend**: Custom API at `https://trip.debmalya.in/`
 
 ### Development Tools
 
 - **Linting**: ESLint with Next.js config
 - **Package Manager**: npm/yarn support
 - **Build Tool**: Next.js with Turbopack support
-- **PDF Export**: jsPDF for itinerary export
-- **Image Capture**: html2canvas for screenshots
 
 ## 🏗️ Project Structure
 
@@ -64,39 +56,17 @@ TripCraft AI is a revolutionary travel planning platform that uses artificial in
 src/
 ├── components/           # React components
 │   ├── ui/              # Reusable UI components (Radix-based)
-│   ├── chat/            # Chat-related components
-│   │   ├── chat-header.tsx       # Chat header with new chat button
-│   │   ├── chat-history-panel.tsx # Chat history sidebar
-│   │   ├── chat-input.tsx        # Message input with voice support
-│   │   ├── chat-message.tsx      # Message display component
-│   │   ├── flight-card.tsx       # Flight booking cards
-│   │   ├── hotel-card.tsx        # Hotel booking cards
-│   │   ├── quick-actions.tsx     # Quick action buttons
-│   │   └── typing-indicator.tsx  # Loading animation
-│   ├── logs/            # Logging components
 │   ├── hero-section.tsx # Landing page hero
 │   ├── features-section.tsx
 │   ├── pricing-section.tsx
 │   ├── google-auth.tsx  # Google authentication
 │   └── ...
 ├── hooks/               # Custom React hooks
-│   ├── use-chat-history.ts  # Chat history management
-│   ├── use-auth-protection.ts # Auth protection
-│   └── ...
 ├── lib/                 # Utility functions
-│   ├── firebase.ts           # Firebase initialization
-│   ├── chat-api-service.ts   # Chat API integration
-│   ├── chat-history-service.ts # Chat history service
-│   ├── auth-service.ts       # Authentication service
-│   └── ...
 ├── pages/               # Next.js pages
 │   ├── api/            # API routes
-│   ├── chat/           # Chat pages
-│   │   ├── chat.tsx    # Main chat page
-│   │   └── [id].tsx    # Chat session page
 │   ├── _app.tsx        # App wrapper
 │   └── index.tsx       # Home page
-├── types/              # TypeScript type definitions
 └── styles/             # Global styles
 ```
 
@@ -104,19 +74,17 @@ src/
 
 ### Prerequisites
 
-- Node.js 18+ or higher
-- npm or yarn package manager
-- Firebase project with Authentication enabled
-- Google OAuth credentials configured in Firebase Console
-- API backend URL (if using custom API)
+- Node.js 18+
+- npm or yarn
+- Google OAuth credentials (for authentication)
 
 ### Installation
 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/AnTIdoTe003/gen-ai-frontend.git
-   cd gen-ai-frontend
+   git clone https://github.com/your-username/tripcraft-ai.git
+   cd tripcraft-ai
    ```
 
 2. **Install dependencies**
@@ -129,23 +97,15 @@ src/
 
 3. **Set up environment variables**
 
-   Create a `.env.local` file in the root directory with the following variables:
+   ```bash
+   cp .env.example .env.local
+   ```
+
+   Update `.env.local` with your values:
 
    ```env
-   # API Configuration
    NEXT_PUBLIC_API_URL=https://trip.debmalya.in/
-
-   # Google OAuth (via Firebase)
    NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_client_id
-
-   # Firebase Configuration
-   NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-   NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
-   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your_measurement_id
    ```
 
 4. **Run the development server**
@@ -223,38 +183,24 @@ docker run -p 3000:3000 tripcraft-ai  # Run container
 - Considers weather, local events, and seasonal factors
 - Provides detailed day-by-day itineraries with cost breakdowns
 
-### 💬 Chat Interface
-
-- **ChatGPT-like Interface**: Clean, modern conversational UI for trip planning
-- **Voice Input**: Web Speech API integration for hands-free travel requests
-- **Chat History**: Persistent conversation history with session management
-- **Quick Actions**: Pre-defined buttons for common trip planning tasks
-- **Real-time Responses**: Instant AI responses with typing indicators
-- **Message Management**: Copy messages, search history, and manage sessions
-
 ### 🔐 Authentication
 
-- Firebase Authentication with Google OAuth integration
-- Secure user session management
-- Protected routes with authentication checks
-- Seamless sign-in/sign-out experience
+- Google OAuth integration for secure sign-in
+- Seamless user experience with one-click authentication
+- Support for multiple authentication providers
 
 ### 📱 Responsive Design
 
 - Mobile-first approach with Tailwind CSS
 - Beautiful animations and transitions
 - Dark/light theme support with next-themes
-- Optimized for all screen sizes including mobile devices
-- Touch-friendly interface components
 
 ### 🎯 User Experience
 
-- Intuitive conversational trip planning
+- Intuitive step-by-step planning process
 - Real-time itinerary adjustments
-- Interactive flight and hotel cards
 - Integrated booking system
 - Multilingual support
-- Keyboard shortcuts (Cmd/Ctrl + K for new chat)
 
 ## 🚀 Deployment Options
 
@@ -263,15 +209,6 @@ docker run -p 3000:3000 tripcraft-ai  # Run container
 ```bash
 # Deploy to Vercel
 vercel --prod
-```
-
-### Firebase App Hosting
-
-The project includes `apphosting.yaml` configuration for Firebase App Hosting deployment.
-
-```bash
-# Deploy to Firebase App Hosting
-firebase deploy --only hosting
 ```
 
 ### Google Cloud Run
@@ -284,13 +221,6 @@ firebase deploy --only hosting
 
 - Build static files with `npm run build`
 - Deploy to any static hosting provider
-
-## 📚 Additional Documentation
-
-- [Chat Feature Documentation](./CHAT_FEATURE.md) - Detailed guide to the chat interface
-- [Chat History API](./CHAT_HISTORY_API.md) - API integration guide for chat history
-- [Voice Input Improvements](./VOICE_INPUT_IMPROVEMENTS.md) - Voice input feature documentation
-- [Quick Suggestions Enhancement](./QUICK_SUGGESTIONS_ENHANCEMENT.md) - Quick actions documentation
 
 ## 🤝 Contributing
 
@@ -311,7 +241,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Next.js Team** for the amazing framework
 - **Radix UI** for accessible component primitives
 - **Tailwind CSS** for the utility-first CSS framework
-- **Firebase** for authentication and hosting services
 - **Vercel** for hosting and analytics
 - **Google** for authentication services
 
@@ -326,7 +255,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
   <p>Made with ❤️ for travelers who dream big</p>
   <p>
-    <a href="https://tripcraft.debmalya.in/">🌐 Visit TripCraft AI</a> •
+    <a href="https://tripcraft.ai">🌐 Visit Roxy AI</a> •
     <a href="https://twitter.com/tripcraft_ai">🐦 Follow us on Twitter</a> •
     <a href="https://linkedin.com/company/tripcraft-ai">💼 LinkedIn</a>
   </p>
